@@ -25,7 +25,7 @@
     </div>
 
     <div class="col-md-4">
-    <button type="button" class="btn btn-info my-3">Check Form</button>
+    <button type="button" class="btn btn-info my-3"><a href="display.php">Check Form</a></button>
     <input type="submit" class="btn btn-primary mx-2" name="submit" value="Register">
     </div>
     

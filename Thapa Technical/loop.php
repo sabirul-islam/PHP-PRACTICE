@@ -29,9 +29,17 @@
 //     $i++;
 // }while($i<=10);
 
-# For Loop
-for ($i = 1; $i <= 10; $i++){
-    echo "$i";
+// # For Loop
+// for ($i = 1; $i <= 10; $i++){
+//     echo "$i";
+// }
+// echo "$i";
+
+#Foreach Loop
+$students = array("Sabirul", "Shimul", "Shumit", "Shonchoy");
+
+foreach($students as $names){
+    echo "$names ";
 }
-echo "$i";
+
 ?>
