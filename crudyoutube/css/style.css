@@ -1,3 +1,4 @@
+<style>
 *{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Popins', sans-serif;}
 
 .main-div{
@@ -126,5 +127,42 @@ a{
     margin-top: -5%;
 }
 .register .register-form{
-    
+    padding: 10%;
+    margin-top: 10%;
 }
+.btnRegister{
+    float: right;
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+
+
+
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+    text-transform: capitalize;
+}
+::placeholder{
+    font-size: 14px;
+}
+</style>

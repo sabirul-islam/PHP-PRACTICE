@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <title>Login Page</title>
+    <?php include 'css/style.css' ?>
+    <?php include 'links/links.php' ?>
 </head>
 <body>
 <div class="container register">
 <div class="row">
 
-<div class="col-md-3 registerleft">
-<img src="images/crud.svg" alt="login now">
+<div class="col-md-3 register-left">
+<img src="images/crud.gif" alt="login now">
 <h3>Welcome</h3>
 <p>Please fill all the details carefuly. This form can change your life.</p>
-<a href="selectdata.php">Check Form</a><br/>
+<a href="select.php">Check Form</a><br/>
 </div>
 
 <div class="col-md-9 register-right">
@@ -21,7 +23,7 @@
 Apply for Company placement
 </h3>
 
-<form action="" method="POST">
+<form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
 <div class="row register-form">
 
 <div class="col-md-6">
@@ -63,3 +65,36 @@ Apply for Company placement
     
 </body>
 </html>
+
+<?php
+
+include 'dbcon.php';
+
+if(isset($_POST['submit'])){
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $name = mysqli_real_escape_string($con, $_POST['user']);
+    $mobile = mysqli_real_escape_string($con, $_POST['mobile']);
+    $degree = mysqli_real_escape_string($con, $_POST['degree']);
+    $refer = mysqli_real_escape_string($con, $_POST['refer']);
+    $lang = mysqli_real_escape_string($con, $_POST['lang']);
+
+
+$insertquery = "insert into registration(name, email, mobile, degree, refer, lang) values('$name', '$email', '$mobile', '$degree', '$refer', '$lang')";
+
+$query = mysqli_query($con, $insertquery);
+
+if($query){
+    ?>
+    <script>
+    alert("Inserted successfully");
+    </script>
+    <?php
+}else{
+    ?>
+    <script>
+    alert("Not inserted");
+    </script>
+    <?php
+}
+}
+?>
