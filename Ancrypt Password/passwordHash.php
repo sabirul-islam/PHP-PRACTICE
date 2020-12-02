@@ -2,8 +2,11 @@
 
 $pass = "shimul";
 
+// $option =['cost' => 12, 'salt' => 'mdsabirulislamshimulshumit'];
+
 // $newpass = "sabirul";
 
+// $str_pass = password_hash($pass,PASSWORD_BCRYPT,$option);
 $str_pass = password_hash($pass,PASSWORD_BCRYPT);
 
 echo $str_pass;
